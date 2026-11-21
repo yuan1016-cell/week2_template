@@ -1,0 +1,88 @@
+/* =========================================================
+   theme.css — W2 推坑專頁的衣服 👕
+   這週一樣先借穿，你只要寫 HTML。
+   換配色：到 index.html 把 <body class="theme-milktea">
+   改成 theme-milktea（奶茶）/ theme-matcha（抹茶）/ theme-taro（芋頭）
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,800&display=swap");
+
+/* 每個主題只換這幾個顏色 */
+body.theme-milktea { --bg: #fbf3e8; --card: #fffaf3; --ink: #3b2418; --soft: #8a6a55; --main: #c0703b; --pop: #ff6b6b; --line: #ead8c2; }
+body.theme-matcha  { --bg: #eef3e6; --card: #fbfdf7; --ink: #1f2e1a; --soft: #5f735a; --main: #4f8a3a; --pop: #e8a33d; --line: #d3e0c6; }
+body.theme-taro    { --bg: #f2ecf8; --card: #fcfaff; --ink: #2c1f3d; --soft: #6e5f84; --main: #8a5cc4; --pop: #ff8fb1; --line: #e0d4ef; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif; line-height: 1.85; font-size: 17px;
+}
+a { color: var(--main); font-weight: 700; text-underline-offset: 4px; }
+img { max-width: 100%; }
+
+/* ---------- header：大封面 ---------- */
+header {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px 48px;
+  padding: 56px 20px 40px; text-align: left;
+  background: radial-gradient(circle at 80% 20%, var(--card), var(--bg) 70%);
+}
+header img { width: 220px; filter: drop-shadow(0 16px 24px rgba(0,0,0,.15)); 
+object-fit: cover; border-radius: 50%; }
+header h1 { font-family: "Bricolage Grotesque", "Noto Sans TC", sans-serif; font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.15; margin: 0 0 8px; font-weight: 900; }
+header p { margin: 0; color: var(--soft); font-size: 1.1rem; max-width: 26em; }
+header strong { color: var(--pop); }
+
+/* ---------- nav：黏在上面的選單 ---------- */
+nav { position: sticky; top: 0; z-index: 5; background: var(--ink); padding: 10px 16px; }
+nav ul { list-style: none; margin: 0 auto; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; max-width: 980px; }
+nav a { color: var(--card); text-decoration: none; padding: 4px 14px; border-radius: 999px; font-weight: 500; display: inline-block; }
+nav a:hover { background: var(--main); color: #fff; }
+
+/* ---------- main + aside：兩欄 ---------- */
+main { max-width: 980px; margin: 0 auto; padding: 32px 20px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+@media (min-width: 860px) { main { grid-template-columns: minmax(0, 1fr) 280px; align-items: start; } aside { position: sticky; top: 70px; grid-column: 2; grid-row: 1 / span 6; } }
+section, aside, article {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px 28px;
+}
+section { scroll-margin-top: 70px; }
+h2 { margin: 0 0 12px; font-size: 1.45rem; display: flex; align-items: center; gap: 10px; }
+h2::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+h3 { margin: 0 0 6px; color: var(--main); }
+p { margin: 8px 0; }
+ol, ul { padding-left: 1.4em; }
+li { margin: 6px 0; }
+li::marker { color: var(--main); font-weight: 700; }
+article { background: var(--bg); border-style: dashed; margin-top: 14px; }
+
+/* aside 側欄 */
+aside h2 { font-size: 1.1rem; }
+aside ul { list-style: none; padding: 0; }
+aside li { padding: 8px 12px; background: var(--bg); border-radius: 10px; }
+
+/* ---------- table 排行榜 ---------- */
+table { width: 100%; border-collapse: collapse; font-size: .95rem; overflow: hidden; border-radius: 12px; }
+caption { text-align: left; color: var(--soft); padding-bottom: 8px; font-size: .9rem; }
+th { background: var(--main); color: #fff; text-align: left; padding: 10px 12px; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--line); }
+tr:nth-child(even) td { background: var(--bg); }
+.table-scroll, section:has(table) { overflow-x: auto; }
+.member-photo { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; }
+/* ---------- form 留言表單 ---------- */
+form { display: grid; gap: 14px; }
+label { font-weight: 700; display: block; margin-bottom: 4px; }
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%; font: inherit; padding: 10px 12px; border: 2px solid var(--line); border-radius: 10px; background: #fff; color: #222;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--main); }
+fieldset { border: 2px dashed var(--line); border-radius: 12px; padding: 10px 14px; }
+fieldset label { display: inline-flex; gap: 6px; align-items: center; font-weight: 500; margin-right: 14px; }
+legend { font-weight: 700; padding: 0 6px; }
+button {
+  font: inherit; font-weight: 700; padding: 12px 22px; border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--pop); color: #fff; justify-self: start; box-shadow: 0 6px 0 rgba(0,0,0,.15);
+}
+button:active { transform: translateY(3px); box-shadow: 0 3px 0 rgba(0,0,0,.15); }
+
+/* ---------- footer ---------- */
+footer { text-align: center; padding: 28px 16px 40px; color: var(--soft); font-size: .9rem; }
+footer a { color: var(--soft); }

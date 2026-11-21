@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- ↑ HTML5 文件宣告；下一行 lang="zh-Hant" 代表繁體中文 -->
+<html lang="zh-Hant">
+<!-- ===== head：瀏覽器的設定區，不會顯示在畫面上 ===== -->
+<head>
+  <!-- 文字編碼：中文不變亂碼 -->
+  <meta charset="UTF-8">
+  <!-- 手機用正常大小顯示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ✏️ 改這裡：你的推坑主題 -->
+  <title>&TEAM入坑指南</title>
+  <!-- 借穿的衣服，這行先不要動 -->
+  <link rel="stylesheet" href="theme.css">
+</head>
+
+<!-- ✏️ 改這裡：同學可以為自己網頁換配色 theme-milktea / theme-matcha / theme-taro -->
+<body class="theme-taro">
+
+  <!-- ===== header：網站的招牌 ===== -->
+  <header>
+    <!-- ✏️ 改這裡：換成你的主題圖片，記得改 alt -->
+    <img src="images/logo.jpg" alt="&TEAM團體標誌">
+    <div>
+      <h1>入坑吧！<br>&TEAM狼人宇宙</h1>
+      <p>一位入坑600天的LUNÉ，用<strong>一個網頁</strong>告訴你：這個坑，跳下去就回不來了。</p>
+    </div>
+  </header>
+
+  <!-- ===== nav：頁內導覽，href="#id" 會跳到對應的區塊 ===== -->
+  <nav>
+    <ul>
+      <li><a href="#introduction">簡介</a></li>
+      <li><a href="#MEMBERS">成員介紹</a></li>
+      <li><a href="#route">快來入坑</a></li>
+      <li><a href="#guestbook">留言板</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ===== 區塊 1：推坑理由（有順序 → 用 ol） ===== -->
+    <section id="introduction">
+      <h2>入坑須知</h2>
+      <p>認識&TEAM</p>
+      <!-- ✏️ 改這裡：寫下你的推坑理由 -->
+      <ul>
+        <li>HYBE自辦選秀節目&Audition成團</li>
+        <li>HYBE旗下日本分部9人男團</li>
+        <li>2022年12月7日出道</li>
+        <li>粉絲名LUNÉ，意思為月亮，是「Light Up New Energy」的縮寫</li>
+        <li>包含1名台灣成員，1名韓國成員，及7名日本成員</li>
+      </ul>
+
+      <!-- article：一篇可以獨立存在的小文章 -->
+      <article>
+        <h3>🎵 必聽歌曲-FIREWORK</h3>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/xKkb8fi-CD4?list=RDxKkb8fi-CD4" title="[BE ORIGINAL] &amp;TEAM &#39;FIREWORK&#39; (4K)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </section>
+
+    <!-- ===== 區塊 2：排行榜（表格） ===== -->
+    <section id="MEMBERS">
+      <h2>成員介紹</h2>
+      <!-- ✏️ 改這裡：換成你的排行，一列 <tr> 就是一筆資料 -->
+      <!-- table 表格：tr = 一列，th = 標題格，td = 資料格；每列格數要一樣 -->
+      <table>
+        <tr>
+          <th>成員</th>
+          <th>藝名</th>
+          <th>生日</th>
+          <th>本名</th>
+        </tr>
+        <tr>
+          <td><img src="images/EJ.jpg" alt="成員1" class="member-photo"></td>
+          <td>EJ</td>
+          <td>2002.09.07</td>
+          <td>邊義州</td>
+        </tr>
+        <tr>
+          <td><img src="images/fuma.jpg" alt="成員2" class="member-photo"></td>
+          <td>FUMA</td>
+          <td>1998.06.29</td>
+          <td>村田風雅</td>
+        </tr>
+        <tr>
+          <td><img src="images/k.jpg" alt="成員3" class="member-photo"></td>
+          <td>K</td>
+          <td>1997.10.21</td>
+          <td>古賀祐大</td>
+        </tr>
+        <tr>
+          <td><img src="images/nico.jpg" alt="成員4" class="member-photo"></td>
+          <td>NICHOLAS</td>
+          <td>2002.07.09</td>
+          <td>王奕翔</td>
+        </tr>
+        <tr>
+          <td><img src="images/yuma.jpg" alt="成員5" class="member-photo"></td>
+          <td>YUMA</td>
+          <td>2004.02.07</td>
+          <td>中耒田悠真</td>
+        </tr>
+        <tr>
+          <td><img src="images/jo.jpg" alt="成員6" class="member-photo"></td>
+          <td>JO</td>
+          <td>2004.07.08</td>
+          <td>朝倉穰</td>
+        </tr>
+        <tr>
+          <td><img src="images/harua.jpg" alt="成員7" class="member-photo"></td>
+          <td>HARUA</td>
+          <td>2005.05.01</td>
+          <td>重田美琉愛</td>
+        </tr>
+        <tr>
+          <td><img src="images/taki.jpg" alt="成員8" class="member-photo"></td>
+          <td>TAKI</td>
+          <td>2005.05.04</td>
+          <td>高山浬希</td>
+        </tr>
+        <tr>
+          <td><img src="images/maki.jpg" alt="成員9" class="member-photo"></td>
+          <td>MAKI</td>
+          <td>2006.02.17</td>
+          <td>宏田力</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ===== 區塊 3：新手路線（沒順序 → 用 ul） ===== -->
+    <section id="route">
+      <h2>寶藏男團 等你入坑🫵</h2>
+      <img src="images/andteam.jpg" alt="&TEAM團體照">
+      <ul>
+        <li>又帥氣，又會唱歌跳舞</li>
+        <li>台上台下極具反差魅力</li>
+        <li>想看更多? <a href="https://www.instagram.com/andteam_official/" target="_blank">&TEAM的IG</a> 裡有更多不同風格的照片、影片</li>
+      </ul>
+    </section>
+
+    <!-- ===== 區塊 4：留言表單 ===== -->
+    <section id="guestbook">
+      <h2>✍️ 留言板</h2>
+      <p>你被推坑成功了嗎？留下你的心得吧！（W7 學會 JavaScript 後，這個表單就能真的運作）</p>
+      <!-- form：表單外框。label 的 for 要對上 input 的 id；radio 同一組要用同一個 name -->
+      <form action="#">
+        <div>
+          <label for="nickname">暱稱</label>
+          <input type="text" id="nickname" placeholder="例如：資深LUNÉ">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+        <fieldset>
+          <legend>你的入坑程度</legend>
+          <label><input type="radio" name="level" checked> 觀望中 👀</label>
+          <label><input type="radio" name="level"> 已入坑 🐾</label>
+          <label><input type="radio" name="level"> 瘋狂LUNÉ 🌙</label>
+        </fieldset>
+        <div>
+          <label for="favorite">最喜歡的成員</label>
+          <select id="favorite">
+            <option>EJ</option>
+            <option>FUMA</option>
+            <option>K</option>
+            <option>NICHOLAS</option>
+            <option>YUMA</option>
+            <option>JO</option>
+            <option>HARUA</option>
+            <option>TAKI</option>
+            <option>MAKI</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">想說的話</label>
+          <textarea id="message" rows="4" placeholder="寫下你的入坑心得…"></textarea>
+        </div>
+        <label><input type="checkbox"> 我願意收到下一次的推坑通知</label>
+        <button type="submit">送出留言 🚀</button>
+      </form>
+    </section>
+
+    <!-- ===== aside：側欄，跟主內容有關但不是主角 ===== -->
+    <aside>
+      <h2>📌 其他推薦歌曲</h2>
+      <caption>🧣 冬天必聽</caption>     
+        <ul>
+        <li>🔮<a href="https://www.youtube.com/watch?v=jvPH5Fv5YLY&list=RDjvPH5Fv5YLY&start_radio=1" target="_blank">illumination</a></li>
+        <li>❄️<a href="https://www.youtube.com/watch?v=0V6zjDb1YN0&list=RD0V6zjDb1YN0&start_radio=1" target="_blank">Yukiakari</a></li>
+        <li>⛄<a href="https://www.youtube.com/watch?v=jWhOmnRCm9Y&list=RDjWhOmnRCm9Y&start_radio=1" target="_blank">Mismatch</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- ===== footer：頁尾 ===== -->
+  <footer>
+    <p>© 2026 無條件支持&TEAM的LUNÉ ・ 用 HTML 語意標籤親手打造</p>
+    <p><a href="#">↑ 回到最上面</a></p>
+  </footer>
+
+</body>
+</html>
